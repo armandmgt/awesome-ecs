@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(libawesome_ecs VERSION 1.0.0 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
 
 #Make sure that custom modules like FindRapidJSON are found
 list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
@@ -8,7 +9,7 @@ list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
 # Create target and set properties
 
 add_library(awesome_ecs
-    src/entity.cpp
+        src/Entity.cpp
 )
 
 #Add an alias so that library can be used inside the build tree, e.g. when testing
